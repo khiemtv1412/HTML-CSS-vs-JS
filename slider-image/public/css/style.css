@@ -1,13 +1,39 @@
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left{
+    border-width: 20px 30px 20px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 20px;
+}
+
+#arrow-right{
+    border-width: 20px 0 20px 30px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 20px;
+}
+
+
+
 .slide1{
-    background-image: url(../img/images1.png);
+    background-image: url(https://cdn.tgdd.vn/2020/07/content/bo-anh-yasuo-lol-dep-va-chat-de-lam-hinh-nen-dien-thoai-may2-800x450.jpg);
 }
 
 .slide2{
-    background-image: url(../img/images2.png);
+    background-image: url(https://bloggame.net/uploads/worigin/2020/03/28/hinhnenyasuo4kdepnhat115e7ebbdfa1db5_0cea09e08883e0207c37e128964bcce4.jpg);
 }
 
 .slide3{
-    background-image: url(../img/images3.png);
+    background-image: url(https://1.bp.blogspot.com/-qKmCG_pwolo/YVz8EtTGSfI/AAAAAAAAEkA/q-QOJnVW6nYiZOZ_l4GLYS-CqrUU1lYYgCLcBGAsYHQ/s16000/yasuo-huyen-long-kiem.jpg);
 }
 
 
@@ -23,26 +49,3 @@
     background-repeat: no-repeat;
 }
 
-.arrow{
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    margin-top: -35px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-
-#arrow{
-    border-width: 20px 30px 20px 0;
-    border-color: transparent #fff transparent transparent;
-    left: 0;
-    margin-left: 20px;
-}
-
-#arrow-right{
-    border-width: 20px 0 20px 30px;
-    border-color: transparent transparent transparent #fff;
-    right: 0;
-    margin-right: 20px;
-}
