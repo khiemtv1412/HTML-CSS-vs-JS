@@ -1,51 +1,59 @@
-.arrow{
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    margin-top: -35px;
-    width: 0;
-    height: 0;
-    border-style: solid;
+*{
+  margin: 0;
+  padding: 0;
+   box-sizing: border-box; 
 }
 
-#arrow-left{
-    border-width: 20px 30px 20px 0;
-    border-color: transparent #fff transparent transparent;
-    left: 0;
-    margin-left: 20px;
-}
-
-#arrow-right{
-    border-width: 20px 0 20px 30px;
-    border-color: transparent transparent transparent #fff;
-    right: 0;
-    margin-right: 20px;
-}
-
-
-
-.slide1{
-    background-image: url(https://cdn.tgdd.vn/2020/07/content/bo-anh-yasuo-lol-dep-va-chat-de-lam-hinh-nen-dien-thoai-may2-800x450.jpg);
-}
-
-.slide2{
-    background-image: url(https://bloggame.net/uploads/worigin/2020/03/28/hinhnenyasuo4kdepnhat115e7ebbdfa1db5_0cea09e08883e0207c37e128964bcce4.jpg);
-}
-
-.slide3{
-    background-image: url(https://1.bp.blogspot.com/-qKmCG_pwolo/YVz8EtTGSfI/AAAAAAAAEkA/q-QOJnVW6nYiZOZ_l4GLYS-CqrUU1lYYgCLcBGAsYHQ/s16000/yasuo-huyen-long-kiem.jpg);
-}
-
-
-.slide{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+body{
+    background: linear-gradient(to right, #2c5364, #0f2027);
     height: 100vh;
-    overflow-x: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
+.slider{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
